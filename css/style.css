@@ -87,6 +87,11 @@ svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.9;
     stroke-linecap:round;stroke-linejoin:round}
 ::selection{background:var(--accent-soft);color:var(--text)}
 
+/* The hidden attribute must win. A class rule that sets `display` (.lightbox
+   is display:flex) otherwise beats the browser's own [hidden]{display:none},
+   leaving an invisible full-screen overlay that eats every click. */
+[hidden]{display:none !important}
+
 .skip-link{
   position:fixed;top:-60px;left:12px;z-index:200;padding:10px 16px;
   background:var(--accent);color:#fff;border-radius:var(--r-sm);transition:top var(--t-fast);
@@ -104,7 +109,7 @@ svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.9;
 
 /* ── 3. Background layers ─────────────────────────────────── */
 .bg-layer{
-  position:fixed;inset:0;z-index:-2;
+  position:fixed;inset:0;z-index:-2;pointer-events:none;
   background-color:var(--bg);
   background-image:var(--bg-image,none);
   background-size:cover;background-position:center;background-attachment:fixed;
@@ -128,7 +133,7 @@ html.has-bg .bg-tint{
   transition:width var(--t-mid) var(--ease);
   will-change:width;
 }
-.sidebar:hover,.sidebar:focus-within,.sidebar.open{width:var(--panel)}
+.sidebar:hover,.sidebar:has(:focus-visible),.sidebar.open{width:var(--panel)}
 
 .sidebar-inner{
   height:100%;width:100%;overflow:hidden;
@@ -140,7 +145,7 @@ html.has-bg .bg-tint{
   box-shadow:none;transition:box-shadow var(--t-mid) var(--ease);
 }
 .sidebar:hover .sidebar-inner,
-.sidebar:focus-within .sidebar-inner,
+.sidebar:has(:focus-visible) .sidebar-inner,
 .sidebar.open .sidebar-inner{box-shadow:var(--shadow)}
 
 .sidebar-head{
@@ -167,8 +172,8 @@ html.has-bg .bg-tint{
 }
 .sidebar:hover .sidebar-title,.sidebar:hover .nav-label,
 .sidebar:hover .theme-label,.sidebar:hover .nav-sub,
-.sidebar:focus-within .sidebar-title,.sidebar:focus-within .nav-label,
-.sidebar:focus-within .theme-label,.sidebar:focus-within .nav-sub,
+.sidebar:has(:focus-visible) .sidebar-title,.sidebar:has(:focus-visible) .nav-label,
+.sidebar:has(:focus-visible) .theme-label,.sidebar:has(:focus-visible) .nav-sub,
 .sidebar.open .sidebar-title,.sidebar.open .nav-label,
 .sidebar.open .theme-label,.sidebar.open .nav-sub{
   opacity:1;transform:none;
@@ -210,7 +215,7 @@ html.has-bg .bg-tint{
 /* nested project links */
 .nav-sub{list-style:none;margin:0 0 6px;padding:0 0 0 46px;max-height:0;overflow:hidden;
   transition:max-height var(--t-mid) var(--ease),opacity var(--t-fast)}
-.sidebar:hover .nav-sub,.sidebar:focus-within .nav-sub,.sidebar.open .nav-sub{max-height:600px}
+.sidebar:hover .nav-sub,.sidebar:has(:focus-visible) .nav-sub,.sidebar.open .nav-sub{max-height:600px}
 .nav-sub a{
   display:block;padding:5px 10px;border-radius:8px;font-size:13px;
   color:var(--faint);text-decoration:none;white-space:nowrap;
@@ -483,7 +488,6 @@ html[data-theme="light"] .i-moon{display:none}
 .lb-nav svg{width:22px;height:22px}
 .lb-nav:hover{background:rgba(255,255,255,.22)}
 .lb-prev{left:16px}.lb-next{right:16px}
-.lb-nav[hidden]{display:none}
 
 /* ── 10. Footer ───────────────────────────────────────────── */
 .site-foot{
