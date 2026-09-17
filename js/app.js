@@ -172,7 +172,7 @@
     if (team.period) { meta.push(esc(team.period)); }
     html += sectionHTML({
       id: team.id,
-      eyebrow: team.period || "Team",
+      eyebrow: team.eyebrow || team.period || "",
       title: team.name,
       desc: team.description,
       meta: meta,
