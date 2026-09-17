@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+*.aep
+*.prproj
+*.psd
+*.ai
+node_modules/
