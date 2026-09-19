@@ -30,7 +30,7 @@ window.PORTFOLIO = {
   /* ── 1. Who you are ─────────────────────────────────────────────────── */
   profile: {
     name: "Aqeel Zaman",
-    kicker: "Graphic Design & Video Editing",
+    kicker: "Graphic Design & Video Editing Portfolio",
     tagline: "Posters, motion, and campaign work for student teams and clubs.",
     // Drop a square photo at assets/profile/avatar.jpg to replace the initials.
     avatar: "assets/profile/avatar.jpg",
@@ -41,8 +41,8 @@ window.PORTFOLIO = {
       "A second short paragraph is a good place for the practical stuff: the tools you use, the kinds of teams you've worked with, and what you're looking for next."
     ],
     links: [
-      { label: "Instagram", url: "https://instagram.com/yourhandle", icon: "instagram" },
-      { label: "YouTube",   url: "https://youtube.com/@yourhandle",  icon: "youtube" },
+      //{ label: "Instagram", url: "https://instagram.com/yourhandle", icon: "instagram" },
+      //{ label: "YouTube",   url: "https://youtube.com/@yourhandle",  icon: "youtube" },
       { label: "LinkedIn",  url: "https://linkedin.com/in/yourhandle", icon: "linkedin" },
       { label: "Email",     url: "mailto:you@example.com",           icon: "mail" }
     ]
@@ -79,7 +79,7 @@ window.PORTFOLIO = {
       eyebrow: "01",
       name: "My Travels",
       role: "Travel Reels",
-      period: "",                 // add years here, e.g. "2021 — 2022"
+      period: "2026",                 // add years here, e.g. "2021 — 2022"
       description: "Vertical travel edits cut for social — pacing, music sync and colour on phone-shot footage.",
       links: [],                  // e.g. { label:"Instagram", url:"…", icon:"instagram" }
       projects: [
@@ -113,11 +113,141 @@ window.PORTFOLIO = {
               poster: "assets/teams/my-travels/travel-reels/11-poster.jpg" },
             { type: "video", src: "assets/teams/my-travels/travel-reels/12.mp4",
               poster: "assets/teams/my-travels/travel-reels/12-poster.jpg" },
-            { type: "video", src: "assets/teams/my-travels/travel-reels/13.mp4",
-              poster: "assets/teams/my-travels/travel-reels/13-poster.jpg" }
           ],
           links: []
-        }
+        },
+        {
+          id: "travel-reel-01",
+          title: "Reel 1",
+          description: "Desc",
+          tags: ["Video"],
+          media: [
+            { type: "video", src: "assets/teams/my-travels/travel-reels/01.mp4",
+              poster: "assets/teams/my-travels/travel-reels/01-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-02",
+          title: "Reel 2",
+          description: "Desc",
+          tags: ["Video"],
+          media: [
+            { type: "video", src: "assets/teams/my-travels/travel-reels/02.mp4",
+              poster: "assets/teams/my-travels/travel-reels/02-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-03",
+          title: "Reel 3",
+          description: "Desc",
+          tags: ["Video"],
+          media: [
+            { type: "video", src: "assets/teams/my-travels/travel-reels/03.mp4",
+              poster: "assets/teams/my-travels/travel-reels/03-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-04",
+          title: "Reel 4",
+          description: "Desc",
+          tags: ["Video"],
+          media: [
+            { type: "video", src: "assets/teams/my-travels/travel-reels/04.mp4",
+              poster: "assets/teams/my-travels/travel-reels/04-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-05",
+          title: "Reel 5",
+          description: "Desc",
+          tags: ["Video"],
+          media: [
+            { type: "video", src: "assets/teams/my-travels/travel-reels/05.mp4",
+              poster: "assets/teams/my-travels/travel-reels/05-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-06",
+          title: "Reel 6",
+          description: "Desc",
+          tags: ["Video"],
+          media: [
+            { type: "video", src: "assets/teams/my-travels/travel-reels/06.mp4",
+              poster: "assets/teams/my-travels/travel-reels/06-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-07",
+          title: "Reel 7",
+          description: "Desc",
+          tags: ["Video"],
+          media: [
+            { type: "video", src: "assets/teams/my-travels/travel-reels/07.mp4",
+              poster: "assets/teams/my-travels/travel-reels/07-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-08",
+          title: "Reel 8",
+          description: "Desc",
+          tags: ["Video"],
+          media: [
+            { type: "video", src: "assets/teams/my-travels/travel-reels/08.mp4",
+              poster: "assets/teams/my-travels/travel-reels/08-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-09",
+          title: "Reel 9",
+          description: "Desc",
+          tags: ["Video"],
+          media: [
+            { type: "video", src: "assets/teams/my-travels/travel-reels/09.mp4",
+              poster: "assets/teams/my-travels/travel-reels/09-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-10",
+          title: "Reel 10",
+          description: "Desc",
+          tags: ["Video"],
+          media: [
+            { type: "video", src: "assets/teams/my-travels/travel-reels/10.mp4",
+              poster: "assets/teams/my-travels/travel-reels/10-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-11",
+          title: "Reel 11",
+          description: "Desc",
+          tags: ["Video"],
+          media: [
+            { type: "video", src: "assets/teams/my-travels/travel-reels/11.mp4",
+              poster: "assets/teams/my-travels/travel-reels/11-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-12",
+          title: "Reel 12",
+          description: "Desc",
+          tags: ["Video"],
+          media: [
+            { type: "video", src: "assets/teams/my-travels/travel-reels/12.mp4",
+              poster: "assets/teams/my-travels/travel-reels/12-poster.jpg" },
+          ],
+          links: []
+        },
       ]
     },
 
@@ -126,7 +256,7 @@ window.PORTFOLIO = {
       eyebrow: "02",
       name: "OnePlus",
       role: "Community Design",
-      period: "",                 // add years here, e.g. "2021 — 2022"
+      period: "2019-2021",                 // add years here, e.g. "2021 — 2022"
       description: "Poster and promo work for OnePlus community events, including the artist announcement series for the OnePlus Music Festival.",
       links: [],                  // e.g. { label:"Instagram", url:"…", icon:"instagram" }
       projects: [
@@ -188,23 +318,34 @@ window.PORTFOLIO = {
           links: []
         },
         {
-          id: "oneplus-gigz-tripz",
-          title: "Gigz & Tripz",
-          description: "Square promo edit.",
-          tags: ["Video", "Social"],
-          media: [
-            { type: "video", src: "assets/teams/oneplus/gigz-tripz/gigztripz.mp4",
-              poster: "assets/teams/oneplus/gigz-tripz/gigztripz-poster.jpg" }
-          ],
-          links: []
-        },
-        {
           id: "oneplus-e-poster",
           title: "Event Poster",
           description: "Event announcement poster.",
           tags: ["Poster"],
           media: [
             { type: "image", src: "assets/teams/oneplus/e-poster/eposter.jpg", alt: "" }
+          ],
+          links: []
+        },
+        {
+          id: "oneplus-poster",
+          title: "Campaign Poster",
+          description: "Campaign poster.",
+          tags: ["Poster"],
+          media: [
+            { type: "image", src: "assets/teams/oneplus/poster/poster.jpg", alt: "" }
+          ],
+          links: []
+        },
+        {
+          id: "oneplus-gigz-tripz",
+          title: "Gigz & Tripz",
+          description: "Square promo edit.",
+          tags: ["Video", "Social"],
+          wide: true,
+          media: [
+            { type: "video", src: "assets/teams/oneplus/gigz-tripz/gigztripz.mp4",
+              poster: "assets/teams/oneplus/gigz-tripz/gigztripz-poster.jpg" }
           ],
           links: []
         },
@@ -228,16 +369,6 @@ window.PORTFOLIO = {
           ],
           links: []
         },
-        {
-          id: "oneplus-poster",
-          title: "Campaign Poster",
-          description: "Campaign poster.",
-          tags: ["Poster"],
-          media: [
-            { type: "image", src: "assets/teams/oneplus/poster/poster.jpg", alt: "" }
-          ],
-          links: []
-        }
       ]
     },
 
@@ -435,15 +566,27 @@ window.PORTFOLIO = {
           links: []
         },
         {
-          id: "infotainment-gamescape",
-          title: "Gamescape",
-          description: "Campaign artwork and promo edit for the Gamescape event.",
+          id: "infotainment-gamezone",
+          title: "Gamezone",
+          description: "Campaign artwork and promo edit for the Gamezone event.",
           tags: ["Poster", "Video", "Campaign"],
           media: [
             { type: "image", src: "assets/teams/infotainment/gamescape/gz1.png", alt: "" },
             { type: "image", src: "assets/teams/infotainment/gamescape/gz2.png", alt: "" },
             { type: "image", src: "assets/teams/infotainment/gamescape/gz3.png", alt: "" },
             { type: "image", src: "assets/teams/infotainment/gamescape/gz4.png", alt: "" },
+            { type: "video", src: "assets/teams/infotainment/gamescape/gamescape2.mp4",
+              poster: "assets/teams/infotainment/gamescape/gamescape2-poster.jpg" }
+          ],
+          links: []
+        },
+        {
+          id: "infotainment-gamescape",
+          title: "Gamescape",
+          description: "Gamescape",
+          tags: ["Poster", "Video", "Campaign"],
+          wide: true,
+          media: [
             { type: "video", src: "assets/teams/infotainment/gamescape/gamescape2.mp4",
               poster: "assets/teams/infotainment/gamescape/gamescape2-poster.jpg" }
           ],
@@ -508,20 +651,65 @@ window.PORTFOLIO = {
       links: [],                  // e.g. { label:"Instagram", url:"…", icon:"instagram" }
       projects: [
         {
-          id: "kerala-association-poster-series",
-          title: "Poster Series",
-          description: "A six-poster run for the association's events, sharing one visual language.",
+          id: "kerala-association-poster-1",
+          title: "Poster 1",
+          description: "",
           tags: ["Poster", "Series"],
           media: [
             { type: "image", src: "assets/teams/kerala-association/poster-series/poster1.jpg", alt: "" },
-            { type: "image", src: "assets/teams/kerala-association/poster-series/poster2.jpg", alt: "" },
-            { type: "image", src: "assets/teams/kerala-association/poster-series/poster3.jpg", alt: "" },
-            { type: "image", src: "assets/teams/kerala-association/poster-series/poster4.jpg", alt: "" },
-            { type: "image", src: "assets/teams/kerala-association/poster-series/poster5.jpg", alt: "" },
-            { type: "image", src: "assets/teams/kerala-association/poster-series/poster6.jpg", alt: "" }
           ],
           links: []
-        }
+        },
+        {
+          id: "kerala-association-poster-2",
+          title: "Poster 2",
+          description: "",
+          tags: ["Poster", "Series"],
+          media: [
+            { type: "image", src: "assets/teams/kerala-association/poster-series/poster2.jpg", alt: "" },
+          ],
+          links: []
+        },
+        {
+          id: "kerala-association-poster-3",
+          title: "Poster 3",
+          description: "",
+          tags: ["Poster", "Series"],
+          media: [
+            { type: "image", src: "assets/teams/kerala-association/poster-series/poster3.jpg", alt: "" },
+          ],
+          links: []
+        },
+        {
+          id: "kerala-association-poster-4",
+          title: "Poster 4",
+          description: "",
+          tags: ["Poster", "Series"],
+          media: [
+            { type: "image", src: "assets/teams/kerala-association/poster-series/poster4.jpg", alt: "" },
+          ],
+          links: []
+        },
+        {
+          id: "kerala-association-poster-5",
+          title: "Poster 5",
+          description: "",
+          tags: ["Poster", "Series"],
+          media: [
+            { type: "image", src: "assets/teams/kerala-association/poster-series/poster5.jpg", alt: "" },
+          ],
+          links: []
+        },
+        {
+          id: "kerala-association-poster-6",
+          title: "Poster 6",
+          description: "",
+          tags: ["Poster", "Series"],
+          media: [
+            { type: "image", src: "assets/teams/kerala-association/poster-series/poster6.jpg", alt: "" },
+          ],
+          links: []
+        },
       ]
     },
 
@@ -539,15 +727,24 @@ window.PORTFOLIO = {
           title: "Currents",
           description: "The Currents campaign — reveal film, cut-down, and the social set for Facebook and LinkedIn.",
           tags: ["Campaign", "Video", "Social"],
+          media: [
+            { type: "image", src: "assets/teams/eeea/currents/facebook-currents.png", alt: "" },
+            { type: "image", src: "assets/teams/eeea/currents/linkedin-currents.png", alt: "" },
+            { type: "image", src: "assets/teams/eeea/currents/linkedin-eeea.png", alt: "" }
+          ],
+          links: []
+        },
+        {
+          id: "eeea-currents-video",
+          title: "Currents Videos",
+          description: "The Currents campaign — reveal film, cut-down, and the social set for Facebook and LinkedIn.",
+          tags: ["Campaign", "Video", "Social"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/eeea/currents/currentsreveal.mp4",
               poster: "assets/teams/eeea/currents/currentsreveal-poster.jpg" },
             { type: "video", src: "assets/teams/eeea/currents/eeea-22-with-text.mp4",
               poster: "assets/teams/eeea/currents/eeea-22-with-text-poster.jpg" },
-            { type: "image", src: "assets/teams/eeea/currents/facebook-currents.png", alt: "" },
-            { type: "image", src: "assets/teams/eeea/currents/linkedin-currents.png", alt: "" },
-            { type: "image", src: "assets/teams/eeea/currents/linkedin-eeea.png", alt: "" }
           ],
           links: []
         },
@@ -557,8 +754,8 @@ window.PORTFOLIO = {
           description: "Identity and poster artwork for Enigma 2.0.",
           tags: ["Poster", "Branding"],
           media: [
+            { type: "image", src: "assets/teams/eeea/enigma/enigma2.jpg", alt: "" },
             { type: "image", src: "assets/teams/eeea/enigma/enigma-2-0.png", alt: "" },
-            { type: "image", src: "assets/teams/eeea/enigma/enigma2.jpg", alt: "" }
           ],
           links: []
         },
@@ -619,6 +816,16 @@ window.PORTFOLIO = {
       links: [],                  // e.g. { label:"Instagram", url:"…", icon:"instagram" }
       projects: [
         {
+          id: "festember-culturals-team-poster",
+          title: "Team Poster",
+          description: "Team announcement artwork.",
+          tags: ["Poster"],
+          media: [
+            { type: "image", src: "assets/teams/festember-culturals/team-poster/team.png", alt: "" }
+          ],
+          links: []
+        },
+        {
           id: "festember-culturals-fmt-induction-2020",
           title: "FMT Induction Promo 2020",
           description: "Recruitment promo for the Festember culturals team.",
@@ -642,16 +849,6 @@ window.PORTFOLIO = {
           ],
           links: []
         },
-        {
-          id: "festember-culturals-team-poster",
-          title: "Team Poster",
-          description: "Team announcement artwork.",
-          tags: ["Poster"],
-          media: [
-            { type: "image", src: "assets/teams/festember-culturals/team-poster/team.png", alt: "" }
-          ],
-          links: []
-        }
       ]
     },
 
