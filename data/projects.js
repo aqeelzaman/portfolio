@@ -538,10 +538,10 @@ window.PORTFOLIO = {
           description: "Gaming and arcade arena built by the Infotainment team for the festival. Poster graphics for the event.",
           tags: ["Poster", "Video", "Campaign"],
           media: [
-            { type: "image", src: "assets/teams/infotainment/gamescape/gz1.png", alt: "" },
-            { type: "image", src: "assets/teams/infotainment/gamescape/gz2.png", alt: "" },
-            { type: "image", src: "assets/teams/infotainment/gamescape/gz3.png", alt: "" },
-            { type: "image", src: "assets/teams/infotainment/gamescape/gz4.png", alt: "" },
+            { type: "image", src: "assets/teams/infotainment/gamezone/gz1.png", alt: "" },
+            { type: "image", src: "assets/teams/infotainment/gamezone/gz2.png", alt: "" },
+            { type: "image", src: "assets/teams/infotainment/gamezone/gz3.png", alt: "" },
+            { type: "image", src: "assets/teams/infotainment/gamezone/gz4.png", alt: "" },
           ],
           links: []
         },
