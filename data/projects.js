@@ -89,8 +89,8 @@ window.PORTFOLIO = {
           description: "A short hike through the Blue Hills Skyline Trail during Fall.",
           tags: ["Video", "Travel"],
           media: [
-            { type: "video", src: "assets/teams/personal/travel-reels/01.mp4",
-              poster: "assets/teams/personal/travel-reels/01-poster.jpg" },
+            { type: "video", src: "assets/teams/travel-reels/01.mp4",
+              poster: "assets/teams/travel-reels/01-poster.jpg" },
           ],
           links: []
         },
@@ -100,8 +100,8 @@ window.PORTFOLIO = {
           description: "A 2 day camping trip with the Northeastern Outdoors Club (NUHOC) in the White Mountains of New Hampshire.",
           tags: ["Video"],
           media: [
-            { type: "video", src: "assets/teams/personal/travel-reels/02.mp4",
-              poster: "assets/teams/personal/travel-reels/02-poster.jpg" },
+            { type: "video", src: "assets/teams/travel-reels/02.mp4",
+              poster: "assets/teams/travel-reels/02-poster.jpg" },
           ],
           links: []
         },
@@ -111,8 +111,8 @@ window.PORTFOLIO = {
           description: "An EDM concert experience at the MGM Music Hall featuring Subtronics and William Black.",
           tags: ["Video"],
           media: [
-            { type: "video", src: "assets/teams/personal/travel-reels/03.mp4",
-              poster: "assets/teams/personal/travel-reels/03-poster.jpg" },
+            { type: "video", src: "assets/teams/travel-reels/03.mp4",
+              poster: "assets/teams/travel-reels/03-poster.jpg" },
           ],
           links: []
         },
@@ -122,8 +122,8 @@ window.PORTFOLIO = {
           description: "A gathering of car enthusiasts at Boston University to showcase their vehicles and network with fellow automobilists.",
           tags: ["Video"],
           media: [
-            { type: "video", src: "assets/teams/personal/travel-reels/04.mp4",
-              poster: "assets/teams/personal/travel-reels/04-poster.jpg" },
+            { type: "video", src: "assets/teams/travel-reels/04.mp4",
+              poster: "assets/teams/travel-reels/04-poster.jpg" },
           ],
           links: []
         },
@@ -133,8 +133,8 @@ window.PORTFOLIO = {
           description: "Quick drive to Portland, Maine for a day trip to explore the city and its scenic waterfront.",
           tags: ["Video"],
           media: [
-            { type: "video", src: "assets/teams/personal/travel-reels/05.mp4",
-              poster: "assets/teams/personal/travel-reels/05-poster.jpg" },
+            { type: "video", src: "assets/teams/travel-reels/05.mp4",
+              poster: "assets/teams/travel-reels/05-poster.jpg" },
           ],
           links: []
         },
@@ -144,8 +144,8 @@ window.PORTFOLIO = {
           description: "A thrilling experience at the Monster Jam event, featuring high-octane monster truck action and jaw-dropping stunts.",
           tags: ["Video"],
           media: [
-            { type: "video", src: "assets/teams/personal/travel-reels/06.mp4",
-              poster: "assets/teams/personal/travel-reels/06-poster.jpg" },
+            { type: "video", src: "assets/teams/travel-reels/06.mp4",
+              poster: "assets/teams/travel-reels/06-poster.jpg" },
           ],
           links: []
         },
@@ -155,8 +155,8 @@ window.PORTFOLIO = {
           description: "An event celebrating hip hop culture and showcasing the latest trends in sneaker fashion.",
           tags: ["Video"],
           media: [
-            { type: "video", src: "assets/teams/personal/travel-reels/07.mp4",
-              poster: "assets/teams/personal/travel-reels/07-poster.jpg" },
+            { type: "video", src: "assets/teams/travel-reels/07.mp4",
+              poster: "assets/teams/travel-reels/07-poster.jpg" },
           ],
           links: []
         },
@@ -166,8 +166,8 @@ window.PORTFOLIO = {
           description: "A watch party for the FIFA '26 World Cup match between Qatar and Switzerland, at 'Mall of Qatar'.",
           tags: ["Video"],
           media: [
-            { type: "video", src: "assets/teams/personal/travel-reels/08.mp4",
-              poster: "assets/teams/personal/travel-reels/08-poster.jpg" },
+            { type: "video", src: "assets/teams/travel-reels/08.mp4",
+              poster: "assets/teams/travel-reels/08-poster.jpg" },
           ],
           links: []
         },
@@ -177,8 +177,8 @@ window.PORTFOLIO = {
           description: "A great opportunity to run the lap of the F1 circuit in Lusail, Qatar.",
           tags: ["Video"],
           media: [
-            { type: "video", src: "assets/teams/personal/travel-reels/09.mp4",
-              poster: "assets/teams/personal/travel-reels/09-poster.jpg" },
+            { type: "video", src: "assets/teams/travel-reels/09.mp4",
+              poster: "assets/teams/travel-reels/09-poster.jpg" },
           ],
           links: []
         },
@@ -188,8 +188,8 @@ window.PORTFOLIO = {
           description: "Celebrating the traditional festival of Onam with friends at San Diego, California.",
           tags: ["Video"],
           media: [
-            { type: "video", src: "assets/teams/personal/travel-reels/10.mp4",
-              poster: "assets/teams/personal/travel-reels/10-poster.jpg" },
+            { type: "video", src: "assets/teams/travel-reels/10.mp4",
+              poster: "assets/teams/travel-reels/10-poster.jpg" },
           ],
           links: []
         },
@@ -199,8 +199,8 @@ window.PORTFOLIO = {
           description: "Exploring the vibrant city of Los Angeles. Reminiscing my GTA V gaming days.",
           tags: ["Video"],
           media: [
-            { type: "video", src: "assets/teams/personal/travel-reels/11.mp4",
-              poster: "assets/teams/personal/travel-reels/11-poster.jpg" },
+            { type: "video", src: "assets/teams/travel-reels/11.mp4",
+              poster: "assets/teams/travel-reels/11-poster.jpg" },
           ],
           links: []
         },
@@ -210,8 +210,8 @@ window.PORTFOLIO = {
           description: "Exploring the beautiful city of San Diego, California.",
           tags: ["Video"],
           media: [
-            { type: "video", src: "assets/teams/personal/travel-reels/12.mp4",
-              poster: "assets/teams/personal/travel-reels/12-poster.jpg" },
+            { type: "video", src: "assets/teams/travel-reels/12.mp4",
+              poster: "assets/teams/travel-reels/12-poster.jpg" },
           ],
           links: []
         },
