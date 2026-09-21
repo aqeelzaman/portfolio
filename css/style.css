@@ -166,16 +166,17 @@ html.has-bg .bg-tint{
 }
 
 /* Everything that only shows when expanded */
-.sidebar-title,.nav-label,.theme-label,.nav-sub{
+.sidebar-title,.nav-label,.theme-label,.nav-sub,.nav-caret{
   opacity:0;transform:translateX(-6px);
   transition:opacity var(--t-fast) var(--ease),transform var(--t-mid) var(--ease);
 }
 .sidebar:hover .sidebar-title,.sidebar:hover .nav-label,
-.sidebar:hover .theme-label,.sidebar:hover .nav-sub,
+.sidebar:hover .theme-label,.sidebar:hover .nav-sub,.sidebar:hover .nav-caret,
 .sidebar:has(:focus-visible) .sidebar-title,.sidebar:has(:focus-visible) .nav-label,
 .sidebar:has(:focus-visible) .theme-label,.sidebar:has(:focus-visible) .nav-sub,
+.sidebar:has(:focus-visible) .nav-caret,
 .sidebar.open .sidebar-title,.sidebar.open .nav-label,
-.sidebar.open .theme-label,.sidebar.open .nav-sub{
+.sidebar.open .theme-label,.sidebar.open .nav-sub,.sidebar.open .nav-caret{
   opacity:1;transform:none;
 }
 
@@ -201,8 +202,20 @@ html.has-bg .bg-tint{
 }
 .nav-badge svg{width:15px;height:15px}
 .nav-label{
+  flex:1 1 auto;
   font-size:14.5px;font-weight:500;white-space:nowrap;
   overflow:hidden;text-overflow:ellipsis;
+}
+/* Marks a team that has projects nested under it */
+.nav-caret{
+  flex:0 0 14px;width:14px;height:14px;color:var(--faint);
+  transition:transform var(--t-mid) var(--ease),color var(--t-fast);
+}
+.nav-caret svg{stroke-width:2.2}
+.nav-item:hover > .nav-link .nav-caret,
+.nav-item:focus-within > .nav-link .nav-caret,
+.nav-item.is-current > .nav-link .nav-caret{
+  transform:rotate(90deg);color:var(--accent);
 }
 .nav-link.is-active{color:var(--text);background:var(--accent-soft)}
 .nav-link.is-active .nav-badge{
@@ -212,10 +225,23 @@ html.has-bg .bg-tint{
   content:"";position:absolute;left:-10px;top:50%;translate:0 -50%;
   width:3px;height:20px;border-radius:0 3px 3px 0;background:var(--accent);
 }
-/* nested project links */
-.nav-sub{list-style:none;margin:0 0 6px;padding:0 0 0 46px;max-height:0;overflow:hidden;
-  transition:max-height var(--t-mid) var(--ease),opacity var(--t-fast)}
-.sidebar:hover .nav-sub,.sidebar:has(:focus-visible) .nav-sub,.sidebar.open .nav-sub{max-height:600px}
+/* Nested project links. Only one team's list is open at a time — the one being
+   hovered/tabbed through, plus whichever team the page is currently scrolled to
+   — so every team title stays reachable without scrolling the rail. */
+.nav-sub{list-style:none;margin:0;padding:0 0 0 46px;max-height:0;overflow:hidden;
+  transition:max-height var(--t-mid) var(--ease),opacity var(--t-fast),margin var(--t-mid) var(--ease)}
+.nav-item:hover > .nav-sub,
+.nav-item:focus-within > .nav-sub,
+.sidebar:hover .nav-item.is-current > .nav-sub,
+.sidebar:has(:focus-visible) .nav-item.is-current > .nav-sub,
+.sidebar.open .nav-item.is-current > .nav-sub{
+  max-height:640px;margin-bottom:6px;
+}
+/* Pointing at a team hands the open slot over to it, so the rail never shows
+   two expanded lists and pushes the lower titles out of sight. */
+.nav-list:hover .nav-item.is-current:not(:hover) > .nav-sub{
+  max-height:0;margin-bottom:0;
+}
 .nav-sub a{
   display:block;padding:5px 10px;border-radius:8px;font-size:13px;
   color:var(--faint);text-decoration:none;white-space:nowrap;
@@ -414,6 +440,12 @@ html[data-theme="light"] .i-moon{display:none}
 /* ── 8. Video player ──────────────────────────────────────── */
 .vwrap{position:relative;width:100%;height:100%;background:#000}
 .vwrap video{width:100%;height:100%;object-fit:contain;background:#000}
+/* When the frame was sized from the file itself (see data-auto-ar in app.js)
+   the two shapes already agree, so `cover` just guarantees the last
+   sub-pixel is filled instead of leaving hairline bars. */
+.media.is-fitted .vwrap,
+.media.is-fitted .vwrap video{background:transparent}
+.media.is-fitted .vwrap video{object-fit:cover}
 .vbar{
   position:absolute;left:0;right:0;bottom:0;z-index:3;
   display:flex;align-items:center;gap:12px;
@@ -548,8 +580,9 @@ html[data-theme="light"] .i-moon{display:none}
   .sidebar.open{transform:none}
   .sidebar:hover{width:var(--panel)}
   .sidebar .sidebar-title,.sidebar .nav-label,
-  .sidebar .theme-label,.sidebar .nav-sub{opacity:1;transform:none}
-  .sidebar .nav-sub{max-height:600px}
+  .sidebar .theme-label,.sidebar .nav-sub,.sidebar .nav-caret{opacity:1;transform:none}
+  /* No hover on touch, so the drawer leans on the active team instead. */
+  .sidebar .nav-item.is-current > .nav-sub{max-height:640px;margin-bottom:6px}
   #main{margin-left:0;padding-top:8px}
   .menu-btn{
     display:grid;place-items:center;position:fixed;top:14px;left:14px;z-index:70;

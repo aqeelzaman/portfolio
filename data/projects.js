@@ -68,7 +68,7 @@ window.PORTFOLIO = {
   favorites: {
     title: "My Personal Favorites",
     description: "Some of my work which I consider my best, across different teams and projects.",
-    ids: ["travel-reel-04", "travel-reel-09", "travel-reel-12", "film-society-witcher", "film-society-induction-2021", "infotainment-mockup", "eeea-tshirt-mockup"],
+    ids: ["travel-reel-04", "travel-reel-09", "travel-reel-12", "film-society-witcher", "film-society-induction-2021", "infotainment-mockup"],
   },
 
   /* ── 4. Teams, in your folder order 1–10 ────────────────────────────── */
@@ -87,7 +87,7 @@ window.PORTFOLIO = {
           id: "travel-reel-01",
           title: "Blue Hills",
           description: "A short hike through the Blue Hills Skyline Trail during Fall.",
-          tags: ["Video", "Travel"],
+          tags: ["Reel", "Video", "Travel", "Hiking"],
           media: [
             { type: "video", src: "assets/teams/travel-reels/01.mp4",
               poster: "assets/teams/travel-reels/01-poster.jpg" },
@@ -98,7 +98,7 @@ window.PORTFOLIO = {
           id: "travel-reel-02",
           title: "White Mountains",
           description: "A 2 day camping trip with the Northeastern Outdoors Club (NUHOC) in the White Mountains of New Hampshire.",
-          tags: ["Video"],
+          tags: ["Reel", "Video", "Travel", "Camping"],
           media: [
             { type: "video", src: "assets/teams/travel-reels/02.mp4",
               poster: "assets/teams/travel-reels/02-poster.jpg" },
@@ -109,7 +109,7 @@ window.PORTFOLIO = {
           id: "travel-reel-03",
           title: "Subtronics Concert",
           description: "An EDM concert experience at the MGM Music Hall featuring Subtronics and William Black.",
-          tags: ["Video"],
+          tags: ["Reel", "Video", "Concert", "Music"],
           media: [
             { type: "video", src: "assets/teams/travel-reels/03.mp4",
               poster: "assets/teams/travel-reels/03-poster.jpg" },
@@ -120,7 +120,7 @@ window.PORTFOLIO = {
           id: "travel-reel-04",
           title: "Car Meet at BU",
           description: "A gathering of car enthusiasts at Boston University to showcase their vehicles and network with fellow automobilists.",
-          tags: ["Video"],
+          tags: ["Reel", "Video", "Automotive", "Event"],
           media: [
             { type: "video", src: "assets/teams/travel-reels/04.mp4",
               poster: "assets/teams/travel-reels/04-poster.jpg" },
@@ -131,7 +131,7 @@ window.PORTFOLIO = {
           id: "travel-reel-05",
           title: "Day trip to Portland",
           description: "Quick drive to Portland, Maine for a day trip to explore the city and its scenic waterfront.",
-          tags: ["Video"],
+          tags: ["Reel", "Video", "Travel", "Road Trip"],
           media: [
             { type: "video", src: "assets/teams/travel-reels/05.mp4",
               poster: "assets/teams/travel-reels/05-poster.jpg" },
@@ -142,7 +142,7 @@ window.PORTFOLIO = {
           id: "travel-reel-06",
           title: "Monster Jam",
           description: "A thrilling experience at the Monster Jam event, featuring high-octane monster truck action and jaw-dropping stunts.",
-          tags: ["Video"],
+          tags: ["Reel", "Video", "Motorsport", "Event"],
           media: [
             { type: "video", src: "assets/teams/travel-reels/06.mp4",
               poster: "assets/teams/travel-reels/06-poster.jpg" },
@@ -153,7 +153,7 @@ window.PORTFOLIO = {
           id: "travel-reel-07",
           title: "SneakerCon Shoe Exhibition",
           description: "An event celebrating hip hop culture and showcasing the latest trends in sneaker fashion.",
-          tags: ["Video"],
+          tags: ["Reel", "Video", "Sneakers", "Event"],
           media: [
             { type: "video", src: "assets/teams/travel-reels/07.mp4",
               poster: "assets/teams/travel-reels/07-poster.jpg" },
@@ -164,7 +164,7 @@ window.PORTFOLIO = {
           id: "travel-reel-08",
           title: "FIFA '26 Watch Party",
           description: "A watch party for the FIFA '26 World Cup match between Qatar and Switzerland, at 'Mall of Qatar'.",
-          tags: ["Video"],
+          tags: ["Reel", "Video", "Football", "Event"],
           media: [
             { type: "video", src: "assets/teams/travel-reels/08.mp4",
               poster: "assets/teams/travel-reels/08-poster.jpg" },
@@ -175,7 +175,7 @@ window.PORTFOLIO = {
           id: "travel-reel-09",
           title: "5k Run at Lusail F1 Circuit",
           description: "A great opportunity to run the lap of the F1 circuit in Lusail, Qatar.",
-          tags: ["Video"],
+          tags: ["Reel", "Video", "Running", "Motorsport"],
           media: [
             { type: "video", src: "assets/teams/travel-reels/09.mp4",
               poster: "assets/teams/travel-reels/09-poster.jpg" },
@@ -186,7 +186,7 @@ window.PORTFOLIO = {
           id: "travel-reel-10",
           title: "Onam at San Diego",
           description: "Celebrating the traditional festival of Onam with friends at San Diego, California.",
-          tags: ["Video"],
+          tags: ["Reel", "Video", "Festival", "Culture"],
           media: [
             { type: "video", src: "assets/teams/travel-reels/10.mp4",
               poster: "assets/teams/travel-reels/10-poster.jpg" },
@@ -197,7 +197,7 @@ window.PORTFOLIO = {
           id: "travel-reel-11",
           title: "Los Angeles Trip",
           description: "Exploring the vibrant city of Los Angeles. Reminiscing my GTA V gaming days.",
-          tags: ["Video"],
+          tags: ["Reel", "Video", "Travel", "City"],
           media: [
             { type: "video", src: "assets/teams/travel-reels/11.mp4",
               poster: "assets/teams/travel-reels/11-poster.jpg" },
@@ -208,7 +208,7 @@ window.PORTFOLIO = {
           id: "travel-reel-12",
           title: "San Diego Exploration",
           description: "Exploring the beautiful city of San Diego, California.",
-          tags: ["Video"],
+          tags: ["Reel", "Video", "Travel", "City"],
           media: [
             { type: "video", src: "assets/teams/travel-reels/12.mp4",
               poster: "assets/teams/travel-reels/12-poster.jpg" },
@@ -231,12 +231,12 @@ window.PORTFOLIO = {
           id: "oneplus-music-festival",
           title: "OnePlus Music Festival — Artist Announcements",
           description: "The artist announcement set for the festival line-up: Dua Lipa, Katy Perry, Amit Trivedi, Ritviz, The Local Train and AWKS. One template, six artists.",
-          tags: ["Poster", "Series", "Illustrator", "Photoshop"],
+          tags: ["Poster", "Series", "Announcement", "Music", "Illustrator", "Photoshop"],
           media: [
-            { type: "image", src: "assets/teams/oneplus/music-festival/awks.jpg", alt: "" },
-            { type: "image", src: "assets/teams/oneplus/music-festival/amittrivedi.jpg", alt: "" },
             { type: "image", src: "assets/teams/oneplus/music-festival/dualipa.jpg", alt: "" },
             { type: "image", src: "assets/teams/oneplus/music-festival/katyperry.jpg", alt: "" },
+            { type: "image", src: "assets/teams/oneplus/music-festival/awks.jpg", alt: "" },
+            { type: "image", src: "assets/teams/oneplus/music-festival/amittrivedi.jpg", alt: "" },
             { type: "image", src: "assets/teams/oneplus/music-festival/ritviz.jpg", alt: "" },
             { type: "image", src: "assets/teams/oneplus/music-festival/thelocaltrain.jpg", alt: "" }
           ],
@@ -246,7 +246,7 @@ window.PORTFOLIO = {
           id: "oneplus-launch-poster",
           title: "OnePlus 7T & TV Launch Poster",
           description: "Launch announcement poster.",
-          tags: ["Poster"],
+          tags: ["Poster", "Product Launch", "Announcement", "Photoshop"],
           media: [
             { type: "image", src: "assets/teams/oneplus/launch-poster/launchposter.jpg", alt: "" }
           ],
@@ -256,63 +256,9 @@ window.PORTFOLIO = {
           id: "oneplus-cover-art-challenge",
           title: "Cover Art Challenge",
           description: "Entry artwork for the community cover art challenge.",
-          tags: ["Cover Art"],
+          tags: ["Cover Art", "Illustration", "Competition"],
           media: [
             { type: "image", src: "assets/teams/oneplus/cover-art-challenge/coverartchallenge.jpg", alt: "" }
-          ],
-          links: []
-        },
-        {
-          id: "oneplus-christmas-gif",
-          title: "Christmas Greetings",
-          description: "Animated seasonal greeting for the community.",
-          tags: ["Animation", "GIF"],
-          media: [
-            { type: "image", src: "assets/teams/oneplus/christmas-gif/christmasgif.gif", alt: "" }
-          ],
-          links: []
-        },
-        {
-          id: "oneplus-dwoc-promo",
-          title: "DWoC Promo",
-          description: "Promo edit for Delta Winter of Code, an over-the-winter-break coding competition, in association with Delta coding club of NITT.",
-          tags: ["Video"],
-          wide: true,
-          media: [
-            { type: "video", src: "assets/teams/oneplus/dwoc-promo/dwocpromo.mp4",
-              poster: "assets/teams/oneplus/dwoc-promo/dwocpromo-poster.jpg" }
-          ],
-          links: []
-        },
-        {
-          id: "oneplus-e-poster",
-          title: "Engineer's Day",
-          description: "Event announcement poster.",
-          tags: ["Poster"],
-          media: [
-            { type: "image", src: "assets/teams/oneplus/e-poster/eposter.jpg", alt: "" }
-          ],
-          links: []
-        },
-        {
-          id: "oneplus-poster",
-          title: "Campaign Poster",
-          description: "Introducing Humans of NITT campaign, where we highlight the stories of our incredible community members.",
-          tags: ["Poster"],
-          media: [
-            { type: "image", src: "assets/teams/oneplus/poster/poster.jpg", alt: "" }
-          ],
-          links: []
-        },
-        {
-          id: "oneplus-gigz-tripz",
-          title: "GigaHertz Promo",
-          description: "Promo edit for GigaHertz Battle of Bands event in association with Festember, annual cultural festival of NITT.",
-          tags: ["Video", "Social"],
-          wide: true,
-          media: [
-            { type: "video", src: "assets/teams/oneplus/gigz-tripz/gigztripz.mp4",
-              poster: "assets/teams/oneplus/gigz-tripz/gigztripz-poster.jpg" }
           ],
           links: []
         },
@@ -320,7 +266,7 @@ window.PORTFOLIO = {
           id: "oneplus-gj-poster",
           title: "Gandhi Jayanti Poster",
           description: "Social awareness poster for the event of Gandhi Jayanti.",
-          tags: ["Poster"],
+          tags: ["Poster", "Social Awareness", "Campaign"],
           media: [
             { type: "image", src: "assets/teams/oneplus/gj-poster/gjposter.jpg", alt: "" }
           ],
@@ -330,9 +276,63 @@ window.PORTFOLIO = {
           id: "oneplus-meet",
           title: "Community Meet",
           description: "Poster for a community meet-up.",
-          tags: ["Poster"],
+          tags: ["Poster", "Event", "Community"],
           media: [
             { type: "image", src: "assets/teams/oneplus/meet/meet.jpg", alt: "" }
+          ],
+          links: []
+        },
+        {
+          id: "oneplus-e-poster",
+          title: "Engineer's Day",
+          description: "Event announcement poster.",
+          tags: ["Poster", "Event", "Announcement"],
+          media: [
+            { type: "image", src: "assets/teams/oneplus/e-poster/eposter.jpg", alt: "" }
+          ],
+          links: []
+        },
+        {
+          id: "oneplus-dwoc-promo",
+          title: "DWoC Promo",
+          description: "Promo edit for Delta Winter of Code, an over-the-winter-break coding competition, in association with Delta coding club of NITT.",
+          tags: ["Video", "Promo", "Event", "Collaboration"],
+          wide: true,
+          media: [
+            { type: "video", src: "assets/teams/oneplus/dwoc-promo/dwocpromo.mp4",
+              poster: "assets/teams/oneplus/dwoc-promo/dwocpromo-poster.jpg" }
+          ],
+          links: []
+        },
+        {
+          id: "oneplus-gigz-tripz",
+          title: "GigaHertz Promo",
+          description: "Promo edit for GigaHertz Battle of Bands event in association with Festember, annual cultural festival of NITT.",
+          tags: ["Video", "Promo", "Music", "Event", "Social"],
+          wide: true,
+          media: [
+            { type: "video", src: "assets/teams/oneplus/gigz-tripz/gigztripz.mp4",
+              poster: "assets/teams/oneplus/gigz-tripz/gigztripz-poster.jpg" }
+          ],
+          links: []
+        },
+        {
+          id: "oneplus-christmas-gif",
+          title: "Christmas Greetings",
+          description: "Animated seasonal greeting for the community.",
+          tags: ["Animation", "GIF", "Seasonal", "Social"],
+          media: [
+            { type: "image", src: "assets/teams/oneplus/christmas-gif/christmasgif.gif", alt: "" }
+          ],
+          links: []
+        },
+        {
+          id: "oneplus-poster",
+          title: "Campaign Poster",
+          description: "Introducing Humans of NITT campaign, where we highlight the stories of our incredible community members.",
+          tags: ["Poster", "Campaign", "Community", "Storytelling"],
+          media: [
+            { type: "image", src: "assets/teams/oneplus/poster/poster.jpg", alt: "" }
           ],
           links: []
         },
@@ -352,7 +352,7 @@ window.PORTFOLIO = {
           id: "film-society-witcher",
           title: "The Witcher",
           description: "A three-part poster study for the society's film column.",
-          tags: ["Poster", "Series"],
+          tags: ["Poster", "Series", "Film", "Key Art"],
           media: [
             { type: "image", src: "assets/teams/film-society/witcher/at-witcher.jpg", alt: "" },
             { type: "image", src: "assets/teams/film-society/witcher/at-witcher1.jpg", alt: "" },
@@ -364,7 +364,7 @@ window.PORTFOLIO = {
           id: "film-society-marriage-story",
           title: "Marriage Story",
           description: "A two-part poster study.",
-          tags: ["Poster", "Series"],
+          tags: ["Poster", "Series", "Film", "Key Art"],
           media: [
             { type: "image", src: "assets/teams/film-society/marriage-story/at-marriagestory.jpg", alt: "" },
             { type: "image", src: "assets/teams/film-society/marriage-story/at-marriagestory1.jpg", alt: "" }
@@ -375,7 +375,7 @@ window.PORTFOLIO = {
           id: "film-society-being-cyrus",
           title: "Being Cyrus",
           description: "A three-part poster study.",
-          tags: ["Poster", "Series"],
+          tags: ["Poster", "Series", "Film", "Key Art"],
           media: [
             { type: "image", src: "assets/teams/film-society/being-cyrus/utr-beingcyrus.jpg", alt: "" },
             { type: "image", src: "assets/teams/film-society/being-cyrus/utr-beingcyrus1.jpg", alt: "" },
@@ -387,7 +387,7 @@ window.PORTFOLIO = {
           id: "film-society-convocation-19",
           title: "Convocation 2019",
           description: "Convocation film for the graduating batch of 2019.",
-          tags: ["Video", "Event"],
+          tags: ["Video", "Event", "Film", "Convocation"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/film-society/convocation-19/convo19.mp4",
@@ -399,7 +399,7 @@ window.PORTFOLIO = {
           id: "film-society-movie-screening",
           title: "Movie Screening Promo",
           description: "Promo cut announcing a screening of 'Once Upon a Time in Hollywood'.",
-          tags: ["Video"],
+          tags: ["Video", "Promo", "Film", "Screening"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/film-society/movie-screening/moviescreeningpromo.mp4",
@@ -411,7 +411,7 @@ window.PORTFOLIO = {
           id: "film-society-induction-promo",
           title: "Induction Promo 2020",
           description: "Recruitment promo for the society's 2020 induction.",
-          tags: ["Video"],
+          tags: ["Video", "Promo", "Recruitment"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/film-society/induction-promo/fsinductionpromo2020rep2.mp4",
@@ -423,7 +423,7 @@ window.PORTFOLIO = {
           id: "film-society-induction-2020",
           title: "Induction Poster",
           description: "Recruitment poster.",
-          tags: ["Poster"],
+          tags: ["Poster", "Recruitment", "Film"],
           media: [
             { type: "image", src: "assets/teams/film-society/induction-2020/induction.jpg", alt: "" }
           ],
@@ -433,7 +433,7 @@ window.PORTFOLIO = {
           id: "film-society-induction-2021",
           title: "Induction Poster 2021",
           description: "Recruitment poster for the 2021 intake.",
-          tags: ["Poster"],
+          tags: ["Poster", "Recruitment", "Film"],
           media: [
             { type: "image", src: "assets/teams/film-society/induction-2021/induction21.jpg", alt: "" }
           ],
@@ -443,7 +443,7 @@ window.PORTFOLIO = {
           id: "film-society-kill-bill",
           title: "Kill Bill",
           description: "Film poster study for the highly anticipated but cancelled movie by Quentin Tarantino.",
-          tags: ["Poster"],
+          tags: ["Poster", "Film", "Key Art", "Concept"],
           media: [
             { type: "image", src: "assets/teams/film-society/kill-bill/killbill.jpg", alt: "" }
           ],
@@ -453,7 +453,7 @@ window.PORTFOLIO = {
           id: "film-society-alumni-pick",
           title: "Alumni Pick",
           description: "Artwork for the society's alumni recommendation series.",
-          tags: ["Poster", "Series"],
+          tags: ["Poster", "Series", "Film", "Social"],
           media: [
             { type: "image", src: "assets/teams/film-society/alumni-pick/alumnipickkou.jpg", alt: "" }
           ],
@@ -463,7 +463,7 @@ window.PORTFOLIO = {
           id: "film-society-womens-day",
           title: "Women's Day",
           description: "Feature artwork.",
-          tags: ["Poster"],
+          tags: ["Poster", "Social Awareness", "Feature"],
           media: [
             { type: "image", src: "assets/teams/film-society/womens-day/womensday.jpg", alt: "" }
           ],
@@ -485,7 +485,7 @@ window.PORTFOLIO = {
           id: "animation-shape-shift",
           title: "Shape Shift",
           description: "A short motion-graphics piece built on morphing geometry.",
-          tags: ["Motion", "Animation", "After Effects"],
+          tags: ["Motion Graphics", "Animation", "Abstract", "After Effects"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/animation/shape-shift/shapeshift.mp4",
@@ -509,7 +509,7 @@ window.PORTFOLIO = {
           id: "infotainment-artist-announcements",
           title: "Artist Announcements",
           description: "Eighteen announcement cards covering the full line-up across multiple editions — music, comedy, fire and light acts. Built on one system so the set reads together.",
-          tags: ["Poster", "Series", "Photoshop"],
+          tags: ["Poster", "Series", "Announcement", "Festival", "Photoshop"],
           media: [
             { type: "image", src: "assets/teams/infotainment/artist-announcements/anne.jpg", alt: "" },
             { type: "image", src: "assets/teams/infotainment/artist-announcements/antaagnifire.jpg", alt: "" },
@@ -536,12 +536,12 @@ window.PORTFOLIO = {
           id: "infotainment-gamezone",
           title: "Gamezone",
           description: "Gaming and arcade arena built by the Infotainment team for the festival. Poster graphics for the event.",
-          tags: ["Poster", "Video", "Campaign"],
+          tags: ["Poster", "Series", "Gaming", "Event"],
           media: [
-            { type: "image", src: "assets/teams/infotainment/gamezone/gz1.png", alt: "" },
-            { type: "image", src: "assets/teams/infotainment/gamezone/gz2.png", alt: "" },
             { type: "image", src: "assets/teams/infotainment/gamezone/gz3.png", alt: "" },
             { type: "image", src: "assets/teams/infotainment/gamezone/gz4.png", alt: "" },
+            { type: "image", src: "assets/teams/infotainment/gamezone/gz1.png", alt: "" },
+            { type: "image", src: "assets/teams/infotainment/gamezone/gz2.png", alt: "" },
           ],
           links: []
         },
@@ -549,7 +549,7 @@ window.PORTFOLIO = {
           id: "infotainment-gamescape",
           title: "Gamescape",
           description: "Gamezone plus Gaming Technical Exhibition announcement promo video.",
-          tags: ["Poster", "Video", "Campaign"],
+          tags: ["Video", "Promo", "Gaming", "Event"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/infotainment/gamescape/gamescape2.mp4",
@@ -561,7 +561,7 @@ window.PORTFOLIO = {
           id: "infotainment-pete-michels",
           title: "Pete Michels",
           description: "Announcing the Live Session with the Animation Director of The Simpsons, Family Guy and Rick & Morty for the festival.",
-          tags: ["Video"],
+          tags: ["Video", "Promo", "Announcement", "Speaker Session"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/infotainment/pete-michels/petemichelspromonitt.mp4",
@@ -573,7 +573,7 @@ window.PORTFOLIO = {
           id: "infotainment-wahid-trailer",
           title: "Wahid Ibn Reza",
           description: "Announcing the Live Session with the Production Manager at the Marvel Cinematic Universe.",
-          tags: ["Video", "Trailer"],
+          tags: ["Video", "Trailer", "Announcement", "Speaker Session"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/infotainment/wahid-trailer/wahidtrailer.mp4",
@@ -585,7 +585,7 @@ window.PORTFOLIO = {
           id: "infotainment-what-if",
           title: "What If",
           description: "Infotainment event answering bizzare questions with scientific reasoning mixed in with fascinating performances on strange musical intruments. This is one of the projects which used some of my animation works.",
-          tags: ["Video"],
+          tags: ["Video", "Promo", "Event", "Motion Graphics"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/infotainment/what-if/whatif.mp4",
@@ -597,7 +597,7 @@ window.PORTFOLIO = {
           id: "infotainment-mockup",
           title: "T-shirt Mockup",
           description: "T-shirt design mockup for the Infotainment team.",
-          tags: ["Design"],
+          tags: ["Merch", "Apparel", "Mockup", "Design"],
           media: [
             { type: "image", src: "assets/teams/infotainment/mockup/mockup.png", alt: "" }
           ],
@@ -619,7 +619,7 @@ window.PORTFOLIO = {
           id: "kerala-association-poster-1",
           title: "Poster 1",
           description: "#Maveli is a mythological figure whose return is celebrated during festival of Onam.",
-          tags: ["Poster", "Series"],
+          tags: ["Poster", "Series", "Countdown", "Culture"],
           media: [
             { type: "image", src: "assets/teams/kerala-association/poster-series/poster1.jpg", alt: "" },
           ],
@@ -629,7 +629,7 @@ window.PORTFOLIO = {
           id: "kerala-association-poster-2",
           title: "Poster 2",
           description: "#Vadamvali is a traditional tug-of-war game played during the festival of Onam.",
-          tags: ["Poster", "Series"],
+          tags: ["Poster", "Series", "Countdown", "Culture"],
           media: [
             { type: "image", src: "assets/teams/kerala-association/poster-series/poster2.jpg", alt: "" },
           ],
@@ -639,7 +639,7 @@ window.PORTFOLIO = {
           id: "kerala-association-poster-3",
           title: "Poster 3",
           description: "#Saree and #Mundu are traditional attire worn during the festival of Onam.",
-          tags: ["Poster", "Series"],
+          tags: ["Poster", "Series", "Countdown", "Culture"],
           media: [
             { type: "image", src: "assets/teams/kerala-association/poster-series/poster3.jpg", alt: "" },
           ],
@@ -649,7 +649,7 @@ window.PORTFOLIO = {
           id: "kerala-association-poster-4",
           title: "Poster 4",
           description: "#Swing or #Oonjal is a traditional swing used during the festival of Onam.",
-          tags: ["Poster", "Series"],
+          tags: ["Poster", "Series", "Countdown", "Culture"],
           media: [
             { type: "image", src: "assets/teams/kerala-association/poster-series/poster4.jpg", alt: "" },
           ],
@@ -659,7 +659,7 @@ window.PORTFOLIO = {
           id: "kerala-association-poster-5",
           title: "Poster 5",
           description: "#Pookalam is a traditional floral arrangement used during the festival of Onam.",
-          tags: ["Poster", "Series"],
+          tags: ["Poster", "Series", "Countdown", "Culture"],
           media: [
             { type: "image", src: "assets/teams/kerala-association/poster-series/poster5.jpg", alt: "" },
           ],
@@ -669,7 +669,7 @@ window.PORTFOLIO = {
           id: "kerala-association-poster-6",
           title: "Poster 6",
           description: "Final day announcement for the on campus event of Onam celebrations by the Kerala Association at NITT.",
-          tags: ["Poster", "Series"],
+          tags: ["Poster", "Series", "Announcement", "Culture"],
           media: [
             { type: "image", src: "assets/teams/kerala-association/poster-series/poster6.jpg", alt: "" },
           ],
@@ -691,7 +691,7 @@ window.PORTFOLIO = {
           id: "eeea-currents",
           title: "Currents Banners",
           description: "The Currents Symposium — The social banner set for Facebook and LinkedIn.",
-          tags: ["Campaign", "Video", "Social"],
+          tags: ["Banner", "Social", "Branding", "Campaign"],
           media: [
             { type: "image", src: "assets/teams/eeea/currents/facebook-currents.png", alt: "" },
             { type: "image", src: "assets/teams/eeea/currents/linkedin-currents.png", alt: "" },
@@ -703,13 +703,13 @@ window.PORTFOLIO = {
           id: "eeea-currents-video",
           title: "Currents Videos",
           description: "The Currents Symposium — reveal film, cut-down, and social edit for the event.",
-          tags: ["Campaign", "Video", "Social"],
+          tags: ["Video", "Campaign", "Promo", "Social"],
           wide: true,
           media: [
-            { type: "video", src: "assets/teams/eeea/currents/currentsreveal.mp4",
-              poster: "assets/teams/eeea/currents/currentsreveal-poster.jpg" },
             { type: "video", src: "assets/teams/eeea/currents/eeea-22-with-text.mp4",
               poster: "assets/teams/eeea/currents/eeea-22-with-text-poster.jpg" },
+            { type: "video", src: "assets/teams/eeea/currents/currentsreveal.mp4",
+              poster: "assets/teams/eeea/currents/currentsreveal-poster.jpg" },
           ],
           links: []
         },
@@ -717,7 +717,7 @@ window.PORTFOLIO = {
           id: "eeea-enigma",
           title: "Enigma 2.0",
           description: "Identity and poster artwork for Enigma 2.0.",
-          tags: ["Poster", "Branding"],
+          tags: ["Poster", "Branding", "Identity", "Event"],
           media: [
             { type: "image", src: "assets/teams/eeea/enigma/enigma2.jpg", alt: "" },
             { type: "image", src: "assets/teams/eeea/enigma/enigma-2-0.png", alt: "" },
@@ -728,7 +728,7 @@ window.PORTFOLIO = {
           id: "eeea-induction-promo",
           title: "Induction Promo",
           description: "Recruitment promo for the association.",
-          tags: ["Video"],
+          tags: ["Video", "Promo", "Recruitment"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/eeea/induction-promo/eeeainductionpromo.mp4",
@@ -740,7 +740,7 @@ window.PORTFOLIO = {
           id: "eeea-eeea-week",
           title: "EEEA Week",
           description: "Promo edit for the association's flagship week.",
-          tags: ["Video"],
+          tags: ["Video", "Promo", "Event"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/eeea/eeea-week/eeeaw-2.mp4",
@@ -752,7 +752,7 @@ window.PORTFOLIO = {
           id: "eeea-tshirt-mockup",
           title: "T-shirt Design",
           description: "Merchandise design, shown on mockup.",
-          tags: ["Merch", "Design"],
+          tags: ["Merch", "Apparel", "Mockup", "Design"],
           media: [
             { type: "image", src: "assets/teams/eeea/tshirt-mockup/tshirtmock3.png", alt: "" }
           ],
@@ -762,7 +762,7 @@ window.PORTFOLIO = {
           id: "eeea-econ-poster",
           title: "Energy Conservation Day Poster",
           description: "Event poster.",
-          tags: ["Poster"],
+          tags: ["Poster", "Event", "Social Awareness"],
           media: [
             { type: "image", src: "assets/teams/eeea/econ-poster/econposter.jpg", alt: "" }
           ],
@@ -784,7 +784,7 @@ window.PORTFOLIO = {
           id: "festember-culturals-team-poster",
           title: "Team Poster",
           description: "Team artwork of a poster of all members of the team when I was inducted.",
-          tags: ["Poster"],
+          tags: ["Poster", "Team", "Composite"],
           media: [
             { type: "image", src: "assets/teams/festember-culturals/team-poster/team.png", alt: "" }
           ],
@@ -794,7 +794,7 @@ window.PORTFOLIO = {
           id: "festember-culturals-induction-2021",
           title: "Induction Promo 2021",
           description: "Recruitment promo for the 2021 intake.",
-          tags: ["Video"],
+          tags: ["Video", "Promo", "Recruitment"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/festember-culturals/induction-2021/festember-21-induction-promo.mp4",
@@ -806,7 +806,7 @@ window.PORTFOLIO = {
           id: "festember-culturals-fmt-induction-2020",
           title: "Marketing Team Induction Promo 2020",
           description: "Recruitment promo for the Festember Marketing Team. My volunteered project to help the team with their recruitment drive.",
-          tags: ["Video"],
+          tags: ["Video", "Promo", "Recruitment"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/festember-culturals/fmt-induction-2020/fmtinduction2020comp2.mp4",
@@ -830,7 +830,7 @@ window.PORTFOLIO = {
           id: "aaveg-dtg-final",
           title: "Believe",
           description: "Final Days-To-Go hype video for the event, with a focus on the theme of belief and perseverance.",
-          tags: ["Video", "Dance", "Premiere Pro"],
+          tags: ["Video", "Countdown", "Dance", "Event", "Premiere Pro"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/aaveg/dtg-final/dtgfinalcomp.mp4",
@@ -842,7 +842,7 @@ window.PORTFOLIO = {
           id: "aaveg-dtg-2019",
           title: "DTG 2019",
           description: "19 Days-To-Go hype video",
-          tags: ["Video", "Dance"],
+          tags: ["Video", "Countdown", "Dance", "Event"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/aaveg/dtg-2019/19dtgfinal2.mp4",
@@ -854,7 +854,7 @@ window.PORTFOLIO = {
           id: "aaveg-dtg-teaser",
           title: "Teaser",
           description: "Short teaser cut.",
-          tags: ["Video", "Teaser"],
+          tags: ["Video", "Teaser", "Countdown", "Event"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/aaveg/dtg-teaser/6dtg.mp4",
@@ -878,7 +878,7 @@ window.PORTFOLIO = {
           id: "freelancing-algos-promo",
           title: "Algos Promo",
           description: "Promo edit for Algos event by Spider, a coding club of NITT.",
-          tags: ["Video", "Client"],
+          tags: ["Video", "Promo", "Event", "Client"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/freelancing/algos-promo/algospromo.mp4",
@@ -890,7 +890,7 @@ window.PORTFOLIO = {
           id: "freelancing-coffee-reads",
           title: "Coffee Reads",
           description: "Pre-project concept edit for Coffee Reads.",
-          tags: ["Video", "Client"],
+          tags: ["Video", "Concept", "Branding", "Client"],
           wide: true,
           media: [
             { type: "video", src: "assets/teams/freelancing/coffee-reads/coffeereadspreproject.mp4",
@@ -902,7 +902,7 @@ window.PORTFOLIO = {
           id: "freelancing-webinar-poster",
           title: "Webinar Poster",
           description: "Poster for a client webinar.",
-          tags: ["Poster", "Client"],
+          tags: ["Poster", "Event", "Client"],
           media: [
             { type: "image", src: "assets/teams/freelancing/webinar-poster/webinarposter1.jpg", alt: "" }
           ],
@@ -912,7 +912,7 @@ window.PORTFOLIO = {
           id: "freelancing-athletics-poster",
           title: "Athletics Poster",
           description: "Event poster for an athletics meet.",
-          tags: ["Poster", "Client"],
+          tags: ["Poster", "Event", "Sports", "Client"],
           media: [
             { type: "image", src: "assets/teams/freelancing/athletics-poster/athleticsposter.png", alt: "" }
           ],
@@ -922,7 +922,7 @@ window.PORTFOLIO = {
           id: "freelancing-cfgl-tee",
           title: "CFGL Pragyan Tee",
           description: "T-shirt design for a client.",
-          tags: ["Merch", "Client"],
+          tags: ["Merch", "Apparel", "Client"],
           media: [
             { type: "image", src: "assets/teams/freelancing/cfgl-tee/cfgltee.jpg", alt: "" }
           ],
@@ -932,7 +932,7 @@ window.PORTFOLIO = {
           id: "freelancing-lizan-poster",
           title: "Lizan Poster",
           description: "Poster commission.",
-          tags: ["Poster", "Client"],
+          tags: ["Poster", "Commission", "Client"],
           media: [
             { type: "image", src: "assets/teams/freelancing/lizan-poster/lizanposter-2.jpg", alt: "" }
           ],

@@ -30,7 +30,8 @@
     pause:     '<svg viewBox="0 0 24 24"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg>',
     volume:    '<svg viewBox="0 0 24 24"><path d="M4 9.5h3.4L12 5.6v12.8L7.4 14.5H4z"/><path d="M16 9.4a3.6 3.6 0 0 1 0 5.2M18.6 6.8a7.2 7.2 0 0 1 0 10.4"/></svg>',
     muted:     '<svg viewBox="0 0 24 24"><path d="M4 9.5h3.4L12 5.6v12.8L7.4 14.5H4z"/><path d="M16.5 10l4 4M20.5 10l-4 4"/></svg>',
-    expand:    '<svg viewBox="0 0 24 24"><path d="M9 3.8H4.5v4.4M15 3.8h4.5v4.4M9 20.2H4.5v-4.4M15 20.2h4.5v-4.4"/></svg>'
+    expand:    '<svg viewBox="0 0 24 24"><path d="M9 3.8H4.5v4.4M15 3.8h4.5v4.4M9 20.2H4.5v-4.4M15 20.2h4.5v-4.4"/></svg>',
+    caret:     '<svg viewBox="0 0 24 24"><path d="M9.5 5.5l6.5 6.5-6.5 6.5"/></svg>'
   };
   function icon(name) { return ICONS[name] || ICONS.link; }
 
@@ -255,13 +256,17 @@
              '" role="group" aria-label="' + (i + 1) + " of " + items.length + '">' + inner + "</div>";
     }).join("");
 
-    // With no explicit aspect, let the first image decide the frame's shape so
-    // portrait poster sets aren't pillarboxed inside a landscape well.
-    var auto = (!pr.aspect && !pr.wide && items[0] && items[0].type === "image");
+    // With no explicit aspect, let the first file decide the frame's shape so
+    // portrait posters and vertical reels aren't pillarboxed in a landscape
+    // well. A full-row card keeps at least 16/9 — an ultrawide film sheds its
+    // bars, but a square or vertical file must not stretch a whole row down
+    // the page. See the data-auto-ar pass further down for the clamps.
+    var kind = items[0] && (items[0].type === "image" || items[0].type === "video");
+    var auto = !pr.aspect && kind;
 
     return '' +
       '<div class="media"' + (many ? ' data-carousel tabindex="0"' : "") +
-        (auto ? " data-auto-ar" : "") + ">" +
+        (auto ? ' data-auto-ar="' + (pr.wide ? "wide" : "card") + '"' : "") + ">" +
         '<div class="viewport"><div class="track">' + slides + "</div></div>" +
         (many
           ? '<button class="car-btn car-prev" aria-label="Previous">' + '<svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>' + "</button>" +
@@ -320,6 +325,7 @@
         '<a class="nav-link" href="#' + esc(id) + '" data-target="' + esc(id) + '">' +
           '<span class="nav-badge">' + badge + "</span>" +
           '<span class="nav-label">' + esc(label) + "</span>" +
+          (subs.length ? '<span class="nav-caret" aria-hidden="true">' + icon("caret") + "</span>" : "") +
         "</a>" +
         (subs.length
           ? '<ul class="nav-sub">' + subs.map(function (s) {
@@ -330,17 +336,47 @@
       "</li>";
   }
 
-  /* ── Frame shape follows the first image ───────────────────────────── */
+  /* ── Frame shape follows the first file ────────────────────────────── */
   $$(".media[data-auto-ar]").forEach(function (media) {
-    var first = $(".slide img", media);
-    if (!first) { return; }
-    function apply() {
-      if (!first.naturalWidth || !first.naturalHeight) { return; }
-      // Clamp so one extreme image can't make a card absurdly tall or wide.
-      var r = Math.max(0.62, Math.min(2.2, first.naturalWidth / first.naturalHeight));
+    // A normal card may go as tall as 9:16 (a vertical reel fits exactly);
+    // a full-row card may not go below 16/9. Both stop at cinemascope.
+    var wide = media.getAttribute("data-auto-ar") === "wide";
+    var lo = wide ? 16 / 9 : 0.56;
+    var hi = wide ? 2.45 : 2.2;
+
+    function fit(w, h) {
+      if (!w || !h) { return; }
+      var native = w / h;
+      var r = Math.max(lo, Math.min(hi, native));
       $$(".slide", media).forEach(function (s) { s.style.setProperty("--ar", r); });
+      // `cover` is only safe once the frame is the same shape as the file, and
+      // only on a single-item frame — every slide shares one --ar, so in a
+      // mixed carousel the odd one out would get cropped. Anything else keeps
+      // `contain` so nothing is cut out of the work.
+      media.classList.toggle("is-fitted",
+        $$(".slide", media).length === 1 && Math.abs(r - native) < 0.005);
     }
-    if (first.complete) { apply(); } else { first.addEventListener("load", apply); }
+
+    var img = $(".slide img", media);
+    if (img) {
+      var fitImg = function () { fit(img.naturalWidth, img.naturalHeight); };
+      if (img.complete) { fitImg(); } else { img.addEventListener("load", fitImg); }
+      return;
+    }
+
+    var vid = $(".slide video", media);
+    if (!vid) { return; }
+    // The poster resolves well before the video's own metadata, so measure it
+    // first; the file itself then corrects the frame if there is no poster.
+    var poster = vid.getAttribute("poster");
+    if (poster) {
+      var pi = new Image();
+      pi.onload = function () { fit(pi.naturalWidth, pi.naturalHeight); };
+      pi.src = poster;
+    }
+    var fitVid = function () { fit(vid.videoWidth, vid.videoHeight); };
+    if (vid.readyState >= 1) { fitVid(); }
+    else { vid.addEventListener("loadedmetadata", fitVid); }
   });
 
   /* ── Carousels ─────────────────────────────────────────────────────── */
@@ -608,6 +644,7 @@
       if (t.el.offsetTop <= y) { best = t; }
     });
     navLinks.forEach(function (a) { a.classList.remove("is-active"); });
+    $$(".nav-item.is-current").forEach(function (el) { el.classList.remove("is-current"); });
     if (best) {
       best.link.classList.add("is-active");
       // Keep the parent team highlighted when a project link is active.
@@ -616,6 +653,11 @@
         var top = parentSub.parentElement.querySelector(".nav-link");
         if (top) { top.classList.add("is-active"); }
       }
+      // The team the page is sitting in, flagged on the <li> itself so the CSS
+      // that opens its project list doesn't have to re-run a :has() on every
+      // scroll tick.
+      var item = best.link.closest(".nav-item");
+      if (item) { item.classList.add("is-current"); }
     }
   }
   window.addEventListener("scroll", function () {
