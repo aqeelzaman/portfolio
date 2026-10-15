@@ -215,6 +215,39 @@ window.PORTFOLIO = {
           ],
           links: []
         },
+        {
+          id: "travel-reel-13",
+          title: "Acadia - Precipice Trail",
+          description: "Climbing the iron-rung cliff route in Acadia National Park, Maine, with the coast opening up below.",
+          tags: ["Reel", "Video", "Travel", "Hiking"],
+          media: [
+            { type: "video", src: "assets/teams/travel-reels/13.mp4",
+              poster: "assets/teams/travel-reels/13-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-14",
+          title: "Lakeside in Acadia",
+          description: "The slower half of the same Maine trip - kayaking at first light, an overlook above the lake, and string lights over the dock after dark.",
+          tags: ["Reel", "Video", "Travel", "Lake"],
+          media: [
+            { type: "video", src: "assets/teams/travel-reels/14.mp4",
+              poster: "assets/teams/travel-reels/14-poster.jpg" },
+          ],
+          links: []
+        },
+        {
+          id: "travel-reel-15",
+          title: "Franconia Ridge",
+          description: "Hiking Franconia Ridge in the White Mountains - fall colour on the climb and sleet at the summit of Mount Lafayette.",
+          tags: ["Reel", "Video", "Travel", "Hiking"],
+          media: [
+            { type: "video", src: "assets/teams/travel-reels/15.mp4",
+              poster: "assets/teams/travel-reels/15-poster.jpg" },
+          ],
+          links: []
+        },
       ]
     },
 

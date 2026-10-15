@@ -44,6 +44,35 @@
     return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   }
 
+  /* ── Case-insensitive file extensions ───────────────────────────────────
+     GitHub Pages serves paths case-sensitively, so a clip exported as
+     "13.MP4" never matches a src written as "13.mp4" and the card renders as
+     a broken tile. Rather than force every file to be renamed, each failed
+     load gets one more try with the extension's case flipped. */
+  function caseVariants(path) {
+    var m = /^(.*)\.([^./]+)$/.exec(path || "");
+    if (!m) { return []; }
+    var out = [];
+    [m[2].toUpperCase(), m[2].toLowerCase()].forEach(function (ext) {
+      var alt = m[1] + "." + ext;
+      if (alt !== path && out.indexOf(alt) === -1) { out.push(alt); }
+    });
+    return out;
+  }
+
+  // Calls back with the first case variant of `path` that actually loads.
+  function loadImage(path, done) {
+    var queue = [path].concat(caseVariants(path));
+    (function next() {
+      var url = queue.shift();
+      if (!url) { return; }
+      var img = new Image();
+      img.onload = function () { done(img, url); };
+      img.onerror = next;
+      img.src = url;
+    })();
+  }
+
   var root = document.documentElement;
 
   /* ── Background image (optional, probed so a missing file is harmless) ─ */
@@ -370,9 +399,10 @@
     // first; the file itself then corrects the frame if there is no poster.
     var poster = vid.getAttribute("poster");
     if (poster) {
-      var pi = new Image();
-      pi.onload = function () { fit(pi.naturalWidth, pi.naturalHeight); };
-      pi.src = poster;
+      loadImage(poster, function (img, url) {
+        if (url !== poster) { vid.setAttribute("poster", url); }
+        fit(img.naturalWidth, img.naturalHeight);
+      });
     }
     var fitVid = function () { fit(vid.videoWidth, vid.videoHeight); };
     if (vid.readyState >= 1) { fitVid(); }
@@ -509,9 +539,16 @@
   }
 
   $$(".slide img").forEach(function (im) {
+    var tried = [];
     function fail() {
+      var cur = im.getAttribute("src");
+      tried.push(cur);
+      var next = caseVariants(cur).filter(function (p) {
+        return tried.indexOf(p) === -1;
+      })[0];
+      if (next) { im.setAttribute("src", next); return; }
       var slide = im.closest(".slide");
-      if (slide) { slide.innerHTML = missingTile("Image", im.getAttribute("src")); }
+      if (slide) { slide.innerHTML = missingTile("Image", tried[0]); }
     }
     im.addEventListener("error", fail);
     // Catch images that already failed before this listener was attached.
@@ -519,10 +556,18 @@
   });
 
   $$(".vwrap video").forEach(function (v) {
+    var tried = [];
     v.addEventListener("error", function () {
-      var src = (v.querySelector("source") || {}).src || "";
+      var s = v.querySelector("source");
+      if (!s) { return; }
+      var cur = s.getAttribute("src");
+      tried.push(cur);
+      var next = caseVariants(cur).filter(function (p) {
+        return tried.indexOf(p) === -1;
+      })[0];
+      if (next) { s.setAttribute("src", next); v.load(); return; }
       var slide = v.closest(".slide") || v.closest(".vwrap");
-      if (slide) { slide.innerHTML = missingTile("Video", src.replace(location.origin + "/", "")); }
+      if (slide) { slide.innerHTML = missingTile("Video", tried[0]); }
     }, true);
   });
 
